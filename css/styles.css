@@ -15,12 +15,37 @@ body {
 	letter-spacing: 0.03em;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+img {
+	display: block;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1200px; /* 1170px + 15px left + 15px right */
+	outline: 2px solid red;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
 .link {
 	text-decoration: none;
+	display: inline-block;
 }
 
 .list {
 	list-style: none;
+	margin: 0;
+	padding-left: 0;
 }
 
 .visually-hidden {
@@ -39,6 +64,8 @@ body {
 .btn {
 	font-family: inherit;
 	letter-spacing: inherit;
+	border: 1px solid transparent;
+	cursor: pointer;
 }
 
 .nav-list .link.current {
@@ -46,17 +73,18 @@ body {
 }
 
 .section {
+	padding-top: 94px;
+	padding-bottom: 94px;
 }
 
-.container {
-	margin-right: auto;
-	margin-left: auto;
-	width: 1200px;
-	outline: 2px solid navy;
+.section-title {
+	font-size: 36px;
+	line-height: 1.16;
+	text-align: center;
+
+	margin-bottom: 50px;
 }
-.inner {
-	background-color: aquamarine;
-}
+
 /* ------------header------------ */
 
 .header {
@@ -118,6 +146,12 @@ body {
 
 .hero {
 	background-color: var(--dark-background-color);
+	text-align: center;
+
+	min-height: 600px;
+	padding-top: 200px;
+	padding-left: 452px;
+	padding-right: 452px;
 }
 
 .hero-title {
@@ -126,8 +160,11 @@ body {
 	line-height: 1.36;
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
-	text-align: center;
 	color: var(--light-text-color);
+
+	max-width: 696px;
+	margin-bottom: 30px;
+	outline: 2px solid aqua;
 }
 
 .hero-btn {
@@ -135,14 +172,13 @@ body {
 	font-size: 16px;
 	line-height: 1.87;
 	letter-spacing: 0.06em;
-	text-align: center;
 	color: var(--light-text-color);
 	background-color: var(--accent-color);
 
-	display: flex;
-	align-items: center;
-	cursor: pointer;
-	border: none;
+	min-width: 216px;
+	height: 50px;
+	padding: 10px 32px;
+	border-radius: 4px;
 }
 
 .hero-btn:hover,
@@ -152,9 +188,7 @@ body {
 
 /* ------------benefits------------ */
 .benefits {
-}
-
-.benefits-title {
+	background-color: antiquewhite;
 }
 
 .benefits-list {
@@ -167,6 +201,8 @@ body {
 	font-size: 14px;
 	line-height: 1.14;
 	text-transform: uppercase;
+
+	margin-bottom: 10px;
 }
 
 .benefits-item-text {
@@ -178,12 +214,7 @@ body {
 /* ------------workflow photos------------ */
 
 .workflow {
-}
-
-.section-title {
-	font-size: 36px;
-	line-height: 1.16;
-	text-align: center;
+	padding-top: 0;
 }
 
 .workflow-list {
@@ -206,6 +237,13 @@ body {
 
 .team-item {
 	background-color: var(--main-background-color);
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 25%);
+	width: 270px;
+}
+
+.member-card-wrap {
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 .team-member-photo {
@@ -216,6 +254,8 @@ body {
 	font-size: 16px;
 	line-height: 1.19;
 	text-align: center;
+
+	margin-bottom: 10px;
 }
 
 .team-member-position {
@@ -229,6 +269,9 @@ body {
 
 .footer {
 	background-color: var(--dark-background-color);
+
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
 
 .footer-logo {
@@ -237,18 +280,26 @@ body {
 
 .address {
 	font-style: normal;
+
+	margin-top: 20px;
 }
 
 .footer-address-text {
 	font-size: 14px;
 	line-height: 1.71;
 	color: var(--light-text-color);
+
+	margin-bottom: 9px;
 }
 
 .footer-contacts-link {
 	font-size: 14px;
 	line-height: 1.71;
 	color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-contacts-item:first-child {
+	margin-bottom: 9px;
 }
 
 .footer-contacts-link:hover,
@@ -259,6 +310,10 @@ body {
 /* ------------portfolio------------ */
 
 .portfolio {
+}
+
+.filter-wrap {
+	margin-bottom: 50px;
 }
 
 .portfolio-filter {
@@ -274,8 +329,10 @@ body {
 	text-align: center;
 	background-color: var(--light-background-color);
 
-	border: none;
-	cursor: pointer;
+	display: inline-block;
+	padding: 6px 22px;
+	border-radius: 4px;
+	height: 38px;
 }
 
 .filter-btn:hover,
@@ -288,9 +345,17 @@ body {
 }
 
 .portfolio-item {
+	width: 370px;
+	outline: 1px solid #eeeeee;
 }
 
 .project-img {
+}
+
+.portfolio-list .item-wrap {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 24px;
 }
 
 .project-title {
@@ -298,6 +363,8 @@ body {
 	line-height: 2;
 	letter-spacing: 0.06em;
 	color: var(--dark-text-color);
+
+	margin-bottom: 4px;
 }
 
 .project-category {
