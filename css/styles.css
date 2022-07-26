@@ -25,15 +25,15 @@ body {
 
 .visually-hidden {
 	position: absolute;
-	white-space: nowrap;
 	width: 1px;
 	height: 1px;
-	overflow: hidden;
+	margin: -1px;
 	border: 0;
 	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	margin: -1px;
+	overflow: hidden;
 }
 
 .btn {
@@ -48,6 +48,15 @@ body {
 .section {
 }
 
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	width: 1200px;
+	outline: 2px solid navy;
+}
+.inner {
+	background-color: aquamarine;
+}
 /* ------------header------------ */
 
 .header {
