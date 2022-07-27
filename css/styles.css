@@ -37,6 +37,19 @@ img {
 	padding-left: 15px;
 }
 
+.section {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
+.section-title {
+	font-size: 36px;
+	line-height: 1.16;
+	text-align: center;
+
+	margin-bottom: 50px;
+}
+
 .link {
 	text-decoration: none;
 	display: inline-block;
@@ -46,6 +59,13 @@ img {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+}
+
+.btn {
+	font-family: inherit;
+	letter-spacing: inherit;
+	border: 1px solid transparent;
+	cursor: pointer;
 }
 
 .visually-hidden {
@@ -61,28 +81,8 @@ img {
 	overflow: hidden;
 }
 
-.btn {
-	font-family: inherit;
-	letter-spacing: inherit;
-	border: 1px solid transparent;
-	cursor: pointer;
-}
-
 .nav-list .link.current {
 	color: var(--accent-color);
-}
-
-.section {
-	padding-top: 94px;
-	padding-bottom: 94px;
-}
-
-.section-title {
-	font-size: 36px;
-	line-height: 1.16;
-	text-align: center;
-
-	margin-bottom: 50px;
 }
 
 /* ------------header------------ */
@@ -91,7 +91,10 @@ img {
 	border-bottom: 1px solid #ececec;
 }
 
+.header-flex,
 .header-nav {
+	display: flex;
+	align-items: center;
 }
 
 .logo {
@@ -107,9 +110,12 @@ img {
 }
 
 .nav-list {
+	display: flex;
+	margin-left: 93px;
 }
 
-.nav-item {
+.nav-item:not(:last-child) {
+	margin-right: 50px;
 }
 
 .nav-link,
@@ -122,6 +128,10 @@ img {
 
 .nav-link {
 	color: var(--dark-text-color);
+
+	display: block;
+	padding-top: 32px;
+	padding-bottom: 32px;
 }
 
 .nav-link:hover,
@@ -130,10 +140,20 @@ img {
 }
 
 .header-contacts {
+	display: flex;
+	margin-left: auto;
+}
+
+.header-contacts-item:not(:last-child) {
+	margin-right: 50px;
 }
 
 .contacts-link {
 	color: var(--description-text-color);
+
+	display: block;
+	padding-top: 32px;
+	padding-bottom: 32px;
 }
 
 .contacts-link:hover,
@@ -193,9 +213,13 @@ img {
 }
 
 .benefits-list {
+	display: flex;
 }
 
-.benefits-item {
+.benefits-item:not(:last-child),
+.workflow-item:not(:last-child),
+.team-item:not(:last-child) {
+	margin-right: 30px;
 }
 
 .benefits-item-title {
@@ -219,9 +243,7 @@ img {
 }
 
 .workflow-list {
-}
-
-.workflow-item {
+	display: flex;
 }
 
 .workflow-photo {
@@ -234,6 +256,7 @@ img {
 }
 
 .team-list {
+	display: flex;
 }
 
 .team-item {
@@ -299,7 +322,7 @@ img {
 	color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-contacts-item:first-child {
+.footer-contacts-item:not(:last-child) {
 	margin-bottom: 9px;
 }
 
@@ -318,9 +341,12 @@ img {
 }
 
 .portfolio-filter {
+	display: flex;
+	justify-content: center;
 }
 
-.filter-item {
+.filter-item:not(:last-child) {
+	margin-right: 8px;
 }
 
 .filter-btn {
@@ -343,6 +369,8 @@ img {
 }
 
 .portfolio-list {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .portfolio-item {
