@@ -171,8 +171,6 @@ img {
 
 	min-height: 600px;
 	padding-top: 200px;
-	padding-left: 452px;
-	padding-right: 452px;
 }
 
 .hero-title {
@@ -182,6 +180,9 @@ img {
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
 	color: var(--light-text-color);
+
+	/* костыль? */
+	margin: 0 auto;
 
 	max-width: 696px;
 	margin-bottom: 30px;
@@ -371,13 +372,13 @@ img {
 .portfolio-list {
 	display: flex;
 	flex-wrap: wrap;
+	gap: 30px;
 }
 
 .portfolio-item {
-	width: 370px;
-}
-
-.project-img {
+	/* calc((100% - кол-во_зазоров_в_строке * значение_
+	одного_зазора) / кол-во_элементов_в_строке) */
+	flex-basis: calc((100% - 2 * 30px) / 3);
 }
 
 .portfolio-list .item-wrap {
