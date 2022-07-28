@@ -164,7 +164,6 @@ img {
 /* ------------main------------ */
 
 /* ------------hero------------ */
-/* ------------temporary option------------ */
 .hero {
 	background-color: var(--dark-background-color);
 	text-align: center;
@@ -384,9 +383,7 @@ img {
 }
 
 .portfolio-list .item-wrap {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-left: 24px;
+	padding: 20px 24px;
 	border-left: 1px solid #eeeeee;
 	border-right: 1px solid #eeeeee;
 	border-bottom: 1px solid #eeeeee;
